@@ -1,0 +1,18 @@
+<apex:page standardController="Account">
+    <apex:includeLightning/>
+
+    <div id="lightning"/>
+    <script>
+        var recordId = '{!Account.id}';
+        $Lightning.use("c:expenseTracker", function () {
+            var attributes = {
+                recordId: recordId
+            };
+            $Lightning.createComponent("c:inputAdress",
+                    attributes,
+                    "lightning",
+                    function (cmp) {
+                    });
+        });
+    </script>
+</apex:page>

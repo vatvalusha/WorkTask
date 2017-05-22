@@ -1,0 +1,34 @@
+/**
+ * Created by valeriyartemenko on 22.05.17.
+ */
+.THIS {
+    height: 2000px;
+    font: Arial;
+    margin-top: 200px;
+    margin-left: 650px;
+    margin-right: 450px;
+}
+.THIS .button2 {
+    background-color: white;
+    color: black;
+    text-align :left;
+}
+.THIS .button3 {
+    background-color: black;
+    color: black;
+}
+
+.THIS.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+.THIS .variant{
+    width:800px;
+    text-align :left;
+}
+.THIS .alert{
+    color: red;
+}
+.THIS .buttonSave{
+    border-radius: 20px;
+}

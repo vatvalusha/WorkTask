@@ -1,0 +1,60 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable"
+                controller="GetAdress"
+                access="global">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="AccountAdress" type="String"/>
+    <aura:attribute name="Message" type="String"/>
+    <aura:attribute name="Flag" type="Boolean" default="true"/>
+    <aura:attribute name="ListAddresses" type="String[]"/>
+    <aura:attribute name="menuAddress" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <form>
+        <aura:if isTrue="{!!v.Flag}">
+            <div class="alert" role="alert">
+            {!v.Message}
+                <div style="float: right">
+                    <button class="slds-button slds-button-icon " title="settings" onclick="{!c.Update}">
+                        <lightning:icon iconName="utility:close" size="xx-small"/>
+                        <span class="slds-assistive-text">Settings</span>
+                    </button>
+                </div>
+            </div>
+
+        </aura:if>
+        <ui:inputText value="{!v.AccountAdress}" label="Adress: "/>
+        <br/>
+        <ui:button class="buttonSave  slds-button" label="Save" press="{!c.save}"/>
+        <br/>
+
+        <!--<ul>
+        <aura:iteration items="{!v.Wrapper.variants}" var="variant">
+            <button   class="slds-button button2" type="button" onclick="{!c.finalSave}" id="{!variant}">{!variant}</button>
+
+        </aura:iteration>
+    </ul> -->
+
+
+        <aura:if isTrue="{!v.menuAddress}">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger-click slds-is-open">
+                <button class="slds-button slds-button-icon slds-button-icon-border-filled" aria-haspopup="true"
+                        title="Show More">
+                    <lightning:icon iconName="utility:switch" size="xx-small"/>
+
+                </button>
+                <div class=" slds-dropdown slds-dropdown_left variant">
+                    <ul class="slds-dropdown--list" role="menu">
+                        <aura:iteration items="{!v.ListAddresses}" var="obj">
+                            <li class="slds-dropdown--item" role="presentation">
+                                <button type="button" class="button2 slds-button buttonList" onclick="{!c.showCaseDeleteModal}"
+                                        id="{!obj}">{!obj}</button>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </div>
+        </aura:if>
+    </form>
+
+
+</aura:component>
