@@ -1,0 +1,9 @@
+<!--
+ - Created by new on 23.05.2017.
+ -->
+<aura:component >
+
+    <aura:attribute name="account" type="Account"/>
+
+    <li><a onclick="{!c.accountSelected}">{!v.account.Name}</a></li>
+</aura:component>

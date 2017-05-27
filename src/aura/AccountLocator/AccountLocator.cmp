@@ -1,0 +1,16 @@
+<!--
+ - Created by new on 23.05.2017.
+ -->
+<aura:component implements="force:appHostable">
+
+    <div>
+        <div>
+            <c:AccountMap />
+        </div>
+
+        <div>
+            <c:AccountList />
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,7 @@
+<!--
+ - Created by new on 24.05.2017.
+ -->
+
+<aura:event type="APPLICATION" description="AddressSelected">
+    <aura:attribute name="address" Type="WrapperInner"/>
+</aura:event>

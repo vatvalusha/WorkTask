@@ -1,0 +1,12 @@
+/**
+ * Created by new on 23.05.2017.
+ */
+.THIS {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS>div {
+    height: 50%;
+}

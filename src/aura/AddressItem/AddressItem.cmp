@@ -1,0 +1,9 @@
+<!--
+ - Created by new on 24.05.2017.
+ -->
+
+<aura:component description="AddressItem">
+    <aura:attribute name="address" type="WrapperInner"/>
+
+    <li><a onclick="{!c.addressSelected}">{!v.address.adresses}</a></li>
+</aura:component>
